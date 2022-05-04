@@ -1,5 +1,7 @@
 import React from "react";
 import Homepage from "./Pages/HomePage";
+import Button from "./Components/Button";
+
 
 function App() {
  return (
@@ -7,6 +9,7 @@ function App() {
    <h1> HI JAS ! </h1>
    <Homepage />
   </>
+
  );
 }
 
