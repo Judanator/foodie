@@ -1,13 +1,8 @@
-import React from "react";
-import Homepage from "./Pages/HomePage";
+import * as React from "React";
+import Homepage from "./Pages/Homepage/HomePage";
 
 function App() {
- return (
-  <>
-   <h1> HI JAS ! </h1>
-   <Homepage />
-  </>
- );
+ return <Homepage />
 }
 
 export default App;
