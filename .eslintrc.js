@@ -21,7 +21,9 @@ module.exports = {
   ],
   rules: {
     'no-unused-vars': 'warn',
+    "no-trailing-spaces": "off",
     "object-curly-spacing": "warn",
+    "react/jsx-tag-spacing": "warn",
     "react/jsx-indent-props": "off",
     "no-tabs": "off",
     "indent": "off",

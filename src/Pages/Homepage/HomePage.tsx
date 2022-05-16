@@ -1,7 +1,8 @@
 import * as React from "React";
-import styled from "styled-components";
+
 import Header from "../../Components/Header";
-import Title from "../../Components/Title/Title";
+import Text from "../../Components/Text/Text";
+import GenerateWebsiteForm from "../../Components/GenerateWebsiteForm";
 
 import { PinkCharacter } from "../../Components/styled";
 
@@ -20,7 +21,8 @@ function HomePage() {
  return (
   <>
    <Header />
-   <Title title={homepageTitle} className="homePageTitle" />
+   <Text title={homepageTitle} className="homePageTitle" />
+   <GenerateWebsiteForm />
   </>
  );
 }

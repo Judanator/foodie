@@ -1,7 +1,7 @@
 /* eslint-disable react/default-props-match-prop-types */
 import * as React from "react";
 
-import "./title.scss"
+import "./text.scss"
 
 interface TitleProps {
   title: any;
