@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cross-env NODE_ENV=development webpack serve --open\"",
+    "start": "concurrently \"cross-env NODE_ENV=development webpack serve --open\" \"nodemon server/server.js\"",
     "build": "cross-env NODE_ENV=production webpack",
     "test": "jest --maxWorkers=50% --coverage",
-    "tsc": "tsc --init"
+    "tsc": "tsc --init",
+    "tailwind": "tailwindcss -i ./src/App.css -o ./css/main.css"
   },
   "repository": {
     "type": "git",
@@ -21,13 +22,17 @@
   },
   "homepage": "https://github.com/Judanator/foodie#readme",
   "dependencies": {
+    "@types/react-dom": "^18.0.4",
     "concurrently": "^7.1.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-query": "^3.34.19",
     "react-router-dom": "^6.3.0",
+    "sass": "^1.51.0",
+    "styled-components": "^5.3.5",
     "typescript": "^4.6.3"
   },
   "devDependencies": {
@@ -36,11 +41,13 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@types/react": "^18.0.0",
+    "@types/react": "^18.0.9",
     "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "babel-loader": "^8.2.4",
+    "cors": "^2.8.5",
     "css-loader": "^6.7.1",
     "eslint": "^8.15.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -48,9 +55,11 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "express": "^4.18.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "mongoose": "^6.3.3",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.0.24",

@@ -1,0 +1,38 @@
+.drawerNav {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background: black;
+ height: 100%;
+ text-align: left;
+ padding: 2rem;
+ position: absolute;
+ top: 0;
+ left: 0;
+ overflow: hidden !important;
+ transition: all 600ms cubic-bezier(0.62, 0.04, 0.3, 1.56);
+ transition-delay: 100ms;
+ a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: #FFD230;
+  text-decoration: none;
+  transition: color 0.3s linear;
+  float: right;
+  width: 100%;
+  &:hover {
+   color: #FF65BE;
+  }
+ }
+}
+
+.hamburger {
+ padding: 0;
+ border: "none";
+ background: "none";
+ cursor: "pointer";
+ float: "right";
+}

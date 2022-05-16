@@ -1,7 +1,12 @@
 import * as React from "react";
 
-export default function Logo() {
+interface LogoProps {
+  imgLink: string;
+  alt?: string;
+}
+
+export default function Logo({ imgLink, alt }: LogoProps) {
   return (
-    <img src="https://i.postimg.cc/MHphj266/LB-Logo.jpg" alt="logo" />
+    <img src={imgLink} alt={alt} />
   )
 }
