@@ -1,16 +1,13 @@
-import React from "react";
-import Homepage from "./Pages/HomePage";
-import Button from "./Components/Button";
-
+import * as React from "React";
+import Homepage from "./Pages/Homepage/HomePage";
+import Button from "./Components/Button/index.js";
 
 function App() {
- return (
-  <>
-   <h1> HI JAS ! </h1>
-   <Homepage />
-  </>
+ return ( 
+ <Homepage />
 
- );
-}
+ <Button>Submit!</Button>
+
+)};
 
 export default App;

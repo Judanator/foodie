@@ -39,7 +39,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(scss|sass)$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',

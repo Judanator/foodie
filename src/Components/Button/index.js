@@ -1,8 +1,27 @@
 import React, { Component } from "react";
-import Base, { Default, Danger, Info, Success } from "./Components/button.css";
+import Base, {
+  Default,
+  Danger,
+  Info,
+  Success,
+} from "./Components/Button/button.css";
+
+export const Button = ({
+  children,
+  type,
+  onClick,
+  buttonStyle,
+  buttonSize,
+}) => {
+  return (
+    <button onClick={onClick} type={type}>
+      {children}
+    </button>
+  );
+};
 
 const { array, strong, onject, bool, func, any } = PropTypes;
- 
+
 class Button extends Component {
   static propTypes = {
     children: any,
@@ -32,20 +51,19 @@ class Button extends Component {
     const { children, onClick, style } = this.props;
   }
   return (
-    <button 
+    <Button
     className={`button ${checkButtonStyle}`}
-    onClick={onClick}, 
-    type={type}
-    >
-    {children} 
-    </button>
+    onClick={onClick}
+    type=submit>
+    {children}
+    </Button>
   );
-};
+}
 
-// const Button = ({ onClick, value }) => (
-//   <button className="btn" onclick={onClick()}>
-//     {value}
-//   </button>
-// );
+const Button = ({ onClick, value }) => (
+  <button className="btn" onclick={onClick()}>
+    {value}
+  </button>
+);
 
 export default Button;
